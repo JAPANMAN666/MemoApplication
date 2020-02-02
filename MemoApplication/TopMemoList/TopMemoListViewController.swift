@@ -13,7 +13,6 @@ class TopMemoListViewController: UIViewController {
     
     /// モデルのインスタンスを作成
     lazy var memoContainerModel: MemoContainerModel = MemoContainerModel()
-
 }
 
 extension TopMemoListViewController {
@@ -35,7 +34,7 @@ extension TopMemoListViewController: UITableViewDataSource {
             tableView.dequeueReusableCell(
                 withIdentifier: "TopMemoListTableViewCell", for: indexPath
                 ) as? TopMemoListTableViewCell else {
-            fatalError("Cannot Cast TopMemoListTableViewCell.")
+            fatalError("Cannot Generate TopMemoListTableViewCell. Check TopMemoListViewController.swift")
         }
         
         /// 格納したメモを取り出してタイトルとしてセット
@@ -49,10 +48,9 @@ extension TopMemoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let nextStoryboard = UIStoryboard(name: "DetailMemo", bundle: nil)
-        let nextVC = nextStoryboard.instantiateViewController(withIdentifier: "DetailMemo")
-        
-        nextVC.
-        
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        if let nextVC = nextStoryboard.instantiateViewController(withIdentifier: "DetailMemo") as? DetailMemoViewController {
+            nextVC.setTextToTextView(detailMemoText: memoContainerModel.memoItems[indexPath.row])
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }

@@ -36,7 +36,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="A9C-hB-MsC"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="editTextView" destination="Cel-eN-k2g" id="Tn2-e8-hSf"/>
+                        <outlet property="editTextView" destination="Cel-eN-k2g" id="H05-ZG-G4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVw-3Z-zpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

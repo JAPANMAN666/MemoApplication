@@ -10,7 +10,7 @@ import Foundation
 
 /// メモ内容を格納するためのモデルを作成
 struct MemoContainerModel {
-    var memoItems: [String] = []
+    var memoItems: [NSAttributedString] = []
     
     init() {
         memoItems = Mock.items
@@ -20,10 +20,10 @@ struct MemoContainerModel {
 /// モック
 struct Mock {
     static var items = [
-        "Title1",
-        "Title2",
-        "Title3",
-        "Title4",
-        "Title5"
+        NSAttributedString(string: "Title1"),
+        NSAttributedString(string: "Title2"),
+        NSAttributedString(string: "Title3"),
+        NSAttributedString(string: "Title4"),
+        NSAttributedString(string: "Title5")
     ]
 }
