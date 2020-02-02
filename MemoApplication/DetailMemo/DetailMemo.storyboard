@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UOj-Fh-gba">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Memo View Controller-->
+        <scene sceneID="fde-CQ-Fga">
+            <objects>
+                <viewController storyboardIdentifier="DetailMemo" id="UOj-Fh-gba" customClass="DetailMemoViewController" customModule="MemoApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fuj-Qn-QaK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cel-eN-k2g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Axs-b3-DKr" firstAttribute="trailing" secondItem="Cel-eN-k2g" secondAttribute="trailing" id="04v-h5-vVP"/>
+                            <constraint firstItem="Cel-eN-k2g" firstAttribute="leading" secondItem="Axs-b3-DKr" secondAttribute="leading" id="361-Kz-OK2"/>
+                            <constraint firstItem="Cel-eN-k2g" firstAttribute="top" secondItem="Axs-b3-DKr" secondAttribute="top" id="DBd-w1-a6A"/>
+                            <constraint firstItem="Axs-b3-DKr" firstAttribute="bottom" secondItem="Cel-eN-k2g" secondAttribute="bottom" id="Y27-Jv-xuz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Axs-b3-DKr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4G1-YN-osn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="A9C-hB-MsC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editTextView" destination="Cel-eN-k2g" id="Tn2-e8-hSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVw-3Z-zpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
