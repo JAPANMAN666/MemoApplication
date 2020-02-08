@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CoreData
 
 /// メモ内容を格納するためのモデルを作成
 struct MemoContainerModel {
-    var memoItems: [NSAttributedString] = []
+    var memoItems: [MemoItem] = []
     
     init() {
-        memoItems = Mock.items
+//        memoItems = Mock.items
     }
 }
 

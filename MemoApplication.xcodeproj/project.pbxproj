@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334EFD9A23E6ECBF001B375D /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EFD9923E6ECBF001B375D /* CoreDataController.swift */; };
 		336DB96D23DC62B200452B0A /* AddNewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */; };
 		336DB96F23DC634600452B0A /* AddNewMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336DB96E23DC634600452B0A /* AddNewMemo.storyboard */; };
 		33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334EFD9923E6ECBF001B375D /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemoViewController.swift; sourceTree = "<group>"; };
 		336DB96E23DC634600452B0A /* AddNewMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewMemo.storyboard; sourceTree = "<group>"; };
 		33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMemoListTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				33B7B39223DBFAA300D55139 /* MemoContainerModel.swift */,
+				334EFD9923E6ECBF001B375D /* CoreDataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				33CA974123DBD837000DE5CC /* AppDelegate.swift in Sources */,
 				33CA974B23DBD837000DE5CC /* MemoApplication.xcdatamodeld in Sources */,
 				33B7B39023DBF5C000D55139 /* DetailMemoViewController.swift in Sources */,
+				334EFD9A23E6ECBF001B375D /* CoreDataController.swift in Sources */,
 				33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */,
 				33B7B39323DBFAA300D55139 /* MemoContainerModel.swift in Sources */,
 				33CA974323DBD837000DE5CC /* SceneDelegate.swift in Sources */,
