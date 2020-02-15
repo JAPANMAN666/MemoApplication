@@ -12,7 +12,8 @@ class TopMemoListTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet weak var editDataLabel: UILabel!
     
-    func configure(title: NSAttributedString) {
+    func configure(title: NSAttributedString, date: String) {
         titleLabel.attributedText = title
+        editDataLabel.text = date
     }
 }

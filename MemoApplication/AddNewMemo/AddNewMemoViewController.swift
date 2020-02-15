@@ -12,6 +12,9 @@ class AddNewMemoViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet private weak var editTextView: UITextView!
     @IBOutlet weak var doneButton: UIBarButtonItem!
 
+    /// 時刻取得用
+    private let date = DateFormatterController()
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.delegate = self
@@ -30,6 +33,7 @@ class AddNewMemoViewController: UIViewController, UINavigationControllerDelegate
             let context = coreDataController.persistentContainer.viewContext
             let item = MemoItem(context: context)
             item.text = editTextView.attributedText
+            item.updatedDate = date.date()
             coreDataController.saveContext()
         }
     }

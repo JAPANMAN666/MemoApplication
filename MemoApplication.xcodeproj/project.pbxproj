@@ -11,6 +11,7 @@
 		336DB96D23DC62B200452B0A /* AddNewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */; };
 		336DB96F23DC634600452B0A /* AddNewMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336DB96E23DC634600452B0A /* AddNewMemo.storyboard */; };
 		337F77BB23F79CCD00140DE0 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F77BA23F79CCD00140DE0 /* Keyboard.swift */; };
+		337F77BF23F7BC8000140DE0 /* DateFormatterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F77BE23F7BC8000140DE0 /* DateFormatterController.swift */; };
 		33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */; };
 		33B7B39023DBF5C000D55139 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B38F23DBF5C000D55139 /* DetailMemoViewController.swift */; };
 		33CA974123DBD837000DE5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA974023DBD837000DE5CC /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemoViewController.swift; sourceTree = "<group>"; };
 		336DB96E23DC634600452B0A /* AddNewMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewMemo.storyboard; sourceTree = "<group>"; };
 		337F77BA23F79CCD00140DE0 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		337F77BE23F7BC8000140DE0 /* DateFormatterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterController.swift; sourceTree = "<group>"; };
 		33866B3123EFF98200CD1580 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		33866B3523EFF99F00CD1580 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = "<group>"; };
 		33866B3623EFF9AD00CD1580 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				337F77BA23F79CCD00140DE0 /* Keyboard.swift */,
 				334EFD9923E6ECBF001B375D /* CoreDataController.swift */,
+				337F77BE23F7BC8000140DE0 /* DateFormatterController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				336DB96D23DC62B200452B0A /* AddNewMemoViewController.swift in Sources */,
 				33CA974123DBD837000DE5CC /* AppDelegate.swift in Sources */,
 				33CA974B23DBD837000DE5CC /* MemoApplication.xcdatamodeld in Sources */,
+				337F77BF23F7BC8000140DE0 /* DateFormatterController.swift in Sources */,
 				33B7B39023DBF5C000D55139 /* DetailMemoViewController.swift in Sources */,
 				334EFD9A23E6ECBF001B375D /* CoreDataController.swift in Sources */,
 				33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */,

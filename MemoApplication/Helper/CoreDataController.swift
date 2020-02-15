@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataController: NSObject {
     var persistentContainer: NSPersistentContainer
-    
+
     /// Persistent Containerを初期化
     init(completionClosure: @escaping () -> ()) {
         persistentContainer = NSPersistentContainer(name: "MemoApplication")
@@ -45,14 +45,14 @@ class CoreDataController: NSObject {
     
     public func deleteItem(_ item: MemoItem) {
         let context = persistentContainer.viewContext
-        
+
         context.delete(item)
     }
     
     public func fetchItem() -> [MemoItem] {
         let context = persistentContainer.viewContext
         let itemFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MemoItem")
-        
+
         do {
             let fetchItems = try context.fetch(itemFetch) as! [MemoItem]
             return fetchItems

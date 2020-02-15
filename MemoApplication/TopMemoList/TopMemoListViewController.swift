@@ -17,7 +17,7 @@ class TopMemoListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         items = (UIApplication.shared.delegate as! AppDelegate).coreDataController.fetchItem()
-    
+
         tableView.reloadData()
     }
 
@@ -52,9 +52,9 @@ extension TopMemoListViewController: UITableViewDataSource {
             fatalError("Cannot Generate TopMemoListTableViewCell. Check TopMemoListViewController.swift")
         }
 
-        if let text = items[indexPath.row].text {
+        if let text = items[indexPath.row].text, let date = items[indexPath.row].updatedDate {
             /// 格納したメモを取り出してタイトルとしてセット
-            cell.configure(title: text)
+            cell.configure(title: text, date: date)
         }
 
         return cell

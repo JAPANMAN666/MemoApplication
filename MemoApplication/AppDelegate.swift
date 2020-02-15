@@ -13,10 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     public var coreDataController: CoreDataController!
+    public var dateFormatter: DateFormatter!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         coreDataController = CoreDataController(){}
+        dateFormatter = DateFormatter()
         return true
     }
 

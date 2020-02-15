@@ -18,6 +18,9 @@ class DetailMemoViewController: UIViewController, UINavigationControllerDelegate
     /// タップしたセルのアイテム格納用
     private var item: MemoItem = MemoItem()
 
+    /// 時刻取得用
+    private let date = DateFormatterController()
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.delegate = self
@@ -25,6 +28,18 @@ class DetailMemoViewController: UIViewController, UINavigationControllerDelegate
         editTextView.attributedText = bodyText
         doneButton.isEnabled = false
         doneButton.tintColor = UIColor.clear
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if editTextView.text.isEmpty {
+            //TODO: 空であるなら警告を出して削除するかを確認する
+        } else {
+            item.text = editTextView.attributedText
+            item.updatedDate = date.date()
+        }
+
     }
 
     /// タップしたセルの中身を引っ張ってきて格納。
@@ -40,7 +55,6 @@ class DetailMemoViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
         /// キーボードを隠して編集を終了する
         editTextView.resignFirstResponder()
-        print("tapped")
     }
 }
 
@@ -54,24 +68,5 @@ extension DetailMemoViewController: UITextViewDelegate {
         /// 編集を終えたらボタンを隠す
         doneButton.isEnabled = false
         doneButton.tintColor = UIColor.clear
-    }
-}
-
-// NavigationController処理系
-extension DetailMemoViewController {
-    /// 戻るボタンを押した時の処理を記述する。
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        // TODO: - テキストビューが空である時は警告を出すようにする。
-
-        /// 遷移する先によって処理を変える。
-        switch viewController {
-        /// トップに遷移する場合
-        case is TopMemoListViewController:
-            // 中身をデータに上書きする
-            item.text = editTextView.attributedText
-
-        default:
-            break
-        }
     }
 }
