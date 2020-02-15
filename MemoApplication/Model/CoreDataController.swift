@@ -43,6 +43,12 @@ class CoreDataController: NSObject {
         }
     }
     
+    public func deleteItem(_ item: MemoItem) {
+        let context = persistentContainer.viewContext
+        
+        context.delete(item)
+    }
+    
     public func fetchItem() -> [MemoItem] {
         let context = persistentContainer.viewContext
         let itemFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MemoItem")

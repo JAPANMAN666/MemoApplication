@@ -27,6 +27,9 @@
 		334EFD9923E6ECBF001B375D /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemoViewController.swift; sourceTree = "<group>"; };
 		336DB96E23DC634600452B0A /* AddNewMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewMemo.storyboard; sourceTree = "<group>"; };
+		33866B3123EFF98200CD1580 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		33866B3523EFF99F00CD1580 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = "<group>"; };
+		33866B3623EFF9AD00CD1580 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMemoListTableViewCell.swift; sourceTree = "<group>"; };
 		33B7B38F23DBF5C000D55139 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		33B7B39223DBFAA300D55139 /* MemoContainerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoContainerModel.swift; sourceTree = "<group>"; };
@@ -62,6 +65,16 @@
 			path = AddNewMemo;
 			sourceTree = "<group>";
 		};
+		33866B3023EFF98200CD1580 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33866B3623EFF9AD00CD1580 /* RxCocoa.framework */,
+				33866B3523EFF99F00CD1580 /* iOS */,
+				33866B3123EFF98200CD1580 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33B7B39123DBFA3400D55139 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 			children = (
 				33CA973F23DBD837000DE5CC /* MemoApplication */,
 				33CA973E23DBD837000DE5CC /* Products */,
+				33866B3023EFF98200CD1580 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +147,7 @@
 				33CA973923DBD837000DE5CC /* Sources */,
 				33CA973A23DBD837000DE5CC /* Frameworks */,
 				33CA973B23DBD837000DE5CC /* Resources */,
+				33866B2F23EFF94300CD1580 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -190,6 +205,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33866B2F23EFF94300CD1580 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33CA973923DBD837000DE5CC /* Sources */ = {
@@ -350,10 +385,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA4LJMUZX3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MemoApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@loader_path/../Frameworks/",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,10 +407,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA4LJMUZX3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MemoApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@loader_path/../Frameworks/",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";

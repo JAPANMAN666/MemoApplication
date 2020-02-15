@@ -23,9 +23,7 @@ class DetailMemoViewController: UIViewController, UINavigationControllerDelegate
         
         editTextView.attributedText = bodyText
     }
-    
-    
-    
+
     /// タップしたセルの中身を引っ張ってきて格納。
     public func setItemToDetailMemo(item: MemoItem) {
         self.item = item
@@ -50,7 +48,7 @@ extension DetailMemoViewController {
         case is TopMemoListViewController:
             // 中身をデータに上書きする
             item.text = editTextView.attributedText
-            
+
         default:
             break
         }

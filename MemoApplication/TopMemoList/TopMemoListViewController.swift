@@ -20,7 +20,13 @@ class TopMemoListViewController: UIViewController {
         super.viewWillAppear(animated)
         items = (UIApplication.shared.delegate as! AppDelegate).coreDataController.fetchItem()
     
-    tableView.reloadData()
+        tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ///左側に編集ボタンを表示する
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 }
 
@@ -66,5 +72,21 @@ extension TopMemoListViewController: UITableViewDelegate {
             nextVC.setItemToDetailMemo(item: items[indexPath.row])
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if let coreDataController = (UIApplication.shared.delegate as! AppDelegate).coreDataController {
+            coreDataController.deleteItem(items[indexPath.row])
+            coreDataController.saveContext()
+            
+            items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            tableView.reloadData()
+        }
+    }
+    /// Editボタンが押された時削除ボタンを表示させる
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
     }
 }
