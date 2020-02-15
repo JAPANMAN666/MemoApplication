@@ -11,9 +11,7 @@ import CoreData
 
 class TopMemoListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
-    /// モデルのインスタンスを作成
-    var memoContainerModel: MemoContainerModel = MemoContainerModel()
-    
+
     var items: [MemoItem] = []
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +20,7 @@ class TopMemoListViewController: UIViewController {
     
         tableView.reloadData()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ///左側に編集ボタンを表示する
@@ -53,12 +51,12 @@ extension TopMemoListViewController: UITableViewDataSource {
                 ) as? TopMemoListTableViewCell else {
             fatalError("Cannot Generate TopMemoListTableViewCell. Check TopMemoListViewController.swift")
         }
-        
+
         if let text = items[indexPath.row].text {
             /// 格納したメモを取り出してタイトルとしてセット
             cell.configure(title: text)
         }
-        
+
         return cell
     }
 }
@@ -77,10 +75,10 @@ extension TopMemoListViewController: UITableViewDelegate {
         if let coreDataController = (UIApplication.shared.delegate as! AppDelegate).coreDataController {
             coreDataController.deleteItem(items[indexPath.row])
             coreDataController.saveContext()
-            
+
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            
+
             tableView.reloadData()
         }
     }

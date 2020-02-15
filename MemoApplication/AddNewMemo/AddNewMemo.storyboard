@@ -15,12 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-vv-Zm9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-vv-Zm9" customClass="DoneTextField" customModule="MemoApplication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sFR-0C-xi5" id="P5R-qb-Zvc"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -33,10 +36,15 @@
                         <viewLayoutGuide key="safeArea" id="5qk-b5-bfX"/>
                     </view>
                     <navigationItem key="navigationItem" id="suI-cG-SmE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="r2z-TX-VcF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="r2z-TX-VcF">
+                            <connections>
+                                <action selector="doneButtonAction:" destination="sFR-0C-xi5" id="wFe-Sj-1c3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textView" destination="xd1-vv-Zm9" id="2LO-Ox-UZm"/>
+                        <outlet property="doneButton" destination="r2z-TX-VcF" id="FaQ-ye-D3e"/>
+                        <outlet property="editTextView" destination="xd1-vv-Zm9" id="2LO-Ox-UZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyZ-bm-v8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

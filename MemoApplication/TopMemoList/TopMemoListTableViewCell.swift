@@ -10,6 +10,7 @@ import UIKit
 
 class TopMemoListTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var editDataLabel: UILabel!
     
     func configure(title: NSAttributedString) {
         titleLabel.attributedText = title

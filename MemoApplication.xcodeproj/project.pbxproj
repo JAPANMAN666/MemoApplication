@@ -10,9 +10,9 @@
 		334EFD9A23E6ECBF001B375D /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EFD9923E6ECBF001B375D /* CoreDataController.swift */; };
 		336DB96D23DC62B200452B0A /* AddNewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */; };
 		336DB96F23DC634600452B0A /* AddNewMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336DB96E23DC634600452B0A /* AddNewMemo.storyboard */; };
+		337F77BB23F79CCD00140DE0 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F77BA23F79CCD00140DE0 /* Keyboard.swift */; };
 		33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */; };
 		33B7B39023DBF5C000D55139 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B38F23DBF5C000D55139 /* DetailMemoViewController.swift */; };
-		33B7B39323DBFAA300D55139 /* MemoContainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7B39223DBFAA300D55139 /* MemoContainerModel.swift */; };
 		33CA974123DBD837000DE5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA974023DBD837000DE5CC /* AppDelegate.swift */; };
 		33CA974323DBD837000DE5CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA974223DBD837000DE5CC /* SceneDelegate.swift */; };
 		33CA974523DBD837000DE5CC /* TopMemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA974423DBD837000DE5CC /* TopMemoListViewController.swift */; };
@@ -27,12 +27,12 @@
 		334EFD9923E6ECBF001B375D /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		336DB96C23DC62B200452B0A /* AddNewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemoViewController.swift; sourceTree = "<group>"; };
 		336DB96E23DC634600452B0A /* AddNewMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewMemo.storyboard; sourceTree = "<group>"; };
+		337F77BA23F79CCD00140DE0 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		33866B3123EFF98200CD1580 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		33866B3523EFF99F00CD1580 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = "<group>"; };
 		33866B3623EFF9AD00CD1580 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		33B7B38D23DBEDAC00D55139 /* TopMemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMemoListTableViewCell.swift; sourceTree = "<group>"; };
 		33B7B38F23DBF5C000D55139 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
-		33B7B39223DBFAA300D55139 /* MemoContainerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoContainerModel.swift; sourceTree = "<group>"; };
 		33CA973D23DBD837000DE5CC /* MemoApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CA974023DBD837000DE5CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CA974223DBD837000DE5CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +65,15 @@
 			path = AddNewMemo;
 			sourceTree = "<group>";
 		};
+		337F77B923F79C6900140DE0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				337F77BA23F79CCD00140DE0 /* Keyboard.swift */,
+				334EFD9923E6ECBF001B375D /* CoreDataController.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		33866B3023EFF98200CD1580 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +87,6 @@
 		33B7B39123DBFA3400D55139 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33B7B39223DBFAA300D55139 /* MemoContainerModel.swift */,
-				334EFD9923E6ECBF001B375D /* CoreDataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 		33CA973F23DBD837000DE5CC /* MemoApplication */ = {
 			isa = PBXGroup;
 			children = (
+				337F77B923F79C6900140DE0 /* Helper */,
 				33CA974023DBD837000DE5CC /* AppDelegate.swift */,
 				33CA974223DBD837000DE5CC /* SceneDelegate.swift */,
 				33CA974C23DBD838000DE5CC /* Assets.xcassets */,
@@ -238,8 +246,8 @@
 				33B7B39023DBF5C000D55139 /* DetailMemoViewController.swift in Sources */,
 				334EFD9A23E6ECBF001B375D /* CoreDataController.swift in Sources */,
 				33B7B38E23DBEDAC00D55139 /* TopMemoListTableViewCell.swift in Sources */,
-				33B7B39323DBFAA300D55139 /* MemoContainerModel.swift in Sources */,
 				33CA974323DBD837000DE5CC /* SceneDelegate.swift in Sources */,
+				337F77BB23F79CCD00140DE0 /* Keyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
